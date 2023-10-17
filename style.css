@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+* {
+  font-family: "Press Start 2P";
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+#container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#game_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 550px;
+  border: 1px solid black;
+  justify-content: center;
+  background-image: url("sky_cool.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#scoreboard {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#flappy {
+  position: absolute;
+  top: 200px;
+  left: 110px;
+  width: 70px;
+  height: 70px;
+
+  background-image: url("BirdPics/flappy1.png");
+  animation: bird_graphics_fly 0.7s steps(1) infinite;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.pipes {
+  position: absolute;
+  width: 70px;
+  height: 550px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.white_boxes {
+  width: 70px;
+  height: 160px;
+}
+.p_up {
+  width: 70px;
+  height: 270px;
+  background-image: url("pipeup.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.p_down {
+  width: 70px;
+  height: 270px;
+  background-image: url("pipedown.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#pipe1 {
+  top: 88px;
+  left: 990px;
+}
+
+#pipe2 {
+  top: 88px;
+  left: 1190px;
+}
+
+#pipe3 {
+  top: 88px;
+  left: 1390px;
+}
+
+#cover1 {
+  position: absolute;
+  height: 550px;
+  top: 88px;
+  left: 312px;
+  width: 200px;
+  background-color: white;
+}
+
+#cover2 {
+  position: absolute;
+  left: 912px;
+  top: 88px;
+  height: 550px;
+  width: 700px;
+  background-color: white;
+}
+
+@keyframes bird_graphics_fly {
+  25% {
+    background-image: url("BirdPics/flappy1.png");
+  }
+  50% {
+    background-image: url("BirdPics/flappy2.png");
+  }
+  75% {
+    background-image: url("BirdPics/flappy3.png");
+  }
+  100% {
+    background-image: url("BirdPics/flappy4.png");
+  }
+}
